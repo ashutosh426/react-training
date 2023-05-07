@@ -32,20 +32,24 @@ function BookStoreFunction() {
             <BookItemFunction 
                 key={eachBook.id}
                 data={eachBook} 
-                onDelete={()=>handleDelete(eachBook)}
-                onView={()=>handleView(eachBook)}></BookItemFunction>
+                // onDelete={()=>handleDelete(eachBook)}
+                // onView={()=>handleView(eachBook)}></BookItemFunction>
+                // onDelete={(bookData)=>handleDelete(bookData)}
+                // onView={(bookData)=>handleView(bookData)}></BookItemFunction>
+                onDelete={handleDelete}
+                onView={handleView}></BookItemFunction>
         ))
     }
 
-    const handleView = (eachBook) => {
+    const handleView = (book) => {
         // here we should navigate to 'book-view-function'
-        navigate(`book-view-function/${eachBook.id}`); // since it is a nested route , we use relative routing
+        navigate(`book-view-function/${book.id}`); // since it is a nested route , we use relative routing
                                             // notice the / is removed from the front
     }
 
-    const handleDelete = (eachBook) => {
+    const handleDelete = (book) => {
         let allBook = allBooks;
-        allBook  = allBook.filter((eBook)=>(eBook.id!=eachBook.id));
+        allBook  = allBook.filter((eBook)=>(eBook.id!=book.id));
         setAllBooks(allBook);
         
     }

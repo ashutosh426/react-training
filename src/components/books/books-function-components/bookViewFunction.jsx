@@ -3,7 +3,9 @@ import { useParams, Link } from "react-router-dom";
 
 function BookViewFunction() {
   const params = useParams();
+  console.log("book id in view:", params.bookId);
   return (
+    
     <div className="container m-2">
       <div className="card">
         <div className="card-header bg-warning text-white">

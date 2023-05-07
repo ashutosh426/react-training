@@ -1,23 +1,23 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function BookAddFunction() {
-    const [title, setTitle] = useState('ADD NEW BOOK')
-    const [newBook, setNewBook] = useState({
-      id: 0,
-      bookTitle: '',
-      bookAuthor: '',
-      bookGenre: '',
-      bookCost: '',
-      bookImageUrl: ''
-    });
+function BookAddHttpFunction() {
+  const navigate = useNavigate();
+  const [title, setTitle] = useState("ADD NEW BOOK");
+  const [newBook, setNewBook] = useState({
+    id: 0,
+    bookTitle: "",
+    bookAuthor: "",
+    bookGenre: "",
+    bookCost: "",
+    bookImageUrl: ""
+  });
 
-  const handleSubmit = (event) =>{
-    event.preventDefault(); // this will stop the form submission/request to the server
-    console.log(newBook);
-    // this form data which is available in the newBook state varibale should be sent to back end
-
-    // navigate to book-store-function
-  }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("New Book:", JSON.stringify(newBook));
+   
+  };
 
   return (
     <div className="container m-5">
@@ -29,13 +29,15 @@ function BookAddFunction() {
           <div className="card-body">
             <div>
               <label htmlFor="idBookTitle" className="form-label">
-                Book Title:
+                Book Title:{" "}
               </label>
               <input
                 type="text"
                 id="idBookTitle"
                 className="form-control"
-                onChange={(event)=>setNewBook({...newBook, bookTitle: event.target.value})}
+                onChange={(event) =>
+                  setNewBook({ ...newBook, bookTitle: event.target.value })
+                }
               ></input>
             </div>
             <div>
@@ -46,7 +48,9 @@ function BookAddFunction() {
                 type="text"
                 id="idBookAuthor"
                 className="form-control"
-                onChange={(event)=>setNewBook({...newBook, bookAuthor: event.target.value})}
+                onChange={(event) =>
+                  setNewBook({ ...newBook, bookAuthor: event.target.value })
+                }
               ></input>
             </div>
             <div>
@@ -56,7 +60,9 @@ function BookAddFunction() {
               <select
                 id="idBookGenre"
                 className="form-control"
-                onChange={(event)=>setNewBook({...newBook, bookGenre: event.target.value})}
+                onChange={(event) =>
+                  setNewBook({ ...newBook, bookGenre: event.target.value })
+                }
               >
                 <option value="Comedy">Comedy</option>
                 <option value="Fiction">Fiction</option>
@@ -65,24 +71,28 @@ function BookAddFunction() {
             </div>
             <div>
               <label htmlFor="idBookCost" className="form-label">
-                Book Cost:
+                Book Cost:{" "}
               </label>
               <input
                 type="text"
                 id="idBookCost"
                 className="form-control"
-                onChange={(event)=>setNewBook({...newBook, bookCost: event.target.value})}
+                onChange={(event) =>
+                  setNewBook({ ...newBook, bookCost: event.target.value })
+                }
               ></input>
             </div>
             <div>
               <label htmlFor="idBookImageUrl" className="form-label">
-                Book Image URL:
+                Book Image URL:{" "}
               </label>
               <input
                 type="text"
                 id="idBookImageUrl"
                 className="form-control"
-                onChange={(event)=>setNewBook({...newBook, bookImageUrl: event.target.value})}
+                onChange={(event) =>
+                  setNewBook({ ...newBook, bookImageUrl: event.target.value })
+                }
               ></input>
             </div>
           </div>
@@ -97,4 +107,4 @@ function BookAddFunction() {
   );
 }
 
-export default BookAddFunction;
+export default BookAddHttpFunction;

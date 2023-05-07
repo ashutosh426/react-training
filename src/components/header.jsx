@@ -16,10 +16,16 @@ function Header() {
             <Link className="nav-link" to="/list-colors">ListColors Component</Link>
           </li>
           <li className="nav-item">
+            <Link className="nav-link" to="/todo-lifecycle">Todo Lifecycle Component</Link>
+          </li>
+          <li className="nav-item">
             <Link className="nav-link" to="/book-store-className">BookStore Class Component</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/book-store-function">BookStore Function Component</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/book-store-http-function">BookStoreHttp Function Component</Link>
           </li>
         </ul>
       </div>
