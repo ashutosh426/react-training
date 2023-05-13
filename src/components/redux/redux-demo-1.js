@@ -1,3 +1,5 @@
+// ONLY REDUX
+
 // here we are going to work only with redux and not react
 // so this is a js file which we will run with nodejs
 
@@ -51,7 +53,7 @@ const reducer = (state = initialState, action)=>{
 // 4. Implement the redux Store
 const store = createStore(reducer);
 
-console.log("Initial state of the store:", store.getState());
+console.log("Initial state of the store:", store.getState()); //  not required
 
 const unsubscribe = store.subscribe(()=>console.log("State:", store.getState()));
 
