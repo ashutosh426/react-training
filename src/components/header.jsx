@@ -30,6 +30,9 @@ function Header() {
           <li className="nav-item">
             <Link className="nav-link" to="/redux-cookie">Redux Cookie</Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/redux-book">Redux Book COmponent</Link>
+          </li>
         </ul>
       </div>
     </nav>

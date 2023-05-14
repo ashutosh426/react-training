@@ -16,7 +16,7 @@ const CookiesComponent = (props) => {
     </div>
   );
 };
-///FOR LINKING THIS CONPONENT TO REDUX
+///FOR LINKING THIS COMPONENT TO REDUX
 // 1.create 2 functions mapStatetoProps and mapDispatchToProps
 const mapStatetoProps = (state) => {
   return {
