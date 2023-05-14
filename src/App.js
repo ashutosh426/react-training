@@ -15,9 +15,9 @@ import BookViewHttpFunction from './components/books/books-function-http-compone
 import BookAddHttpFunction from './components/books/books-function-http-components/bookAddHttpFunction';
 import CookiesComponent from './components/redux/react-redux-cookie-demo/components/cookiesComponent';
 import { Provider } from 'react-redux';
-import store from './components/redux/react-redux-book-demo/store/store';
+import store from './components/redux/react-redux-saga-book-demo/store/store';
 import BookStoreReduxFunction from './components/redux/react-redux-book-demo/components/bookStoreReduxFunction';
-
+import BookStoreReduxSagaFunction from './components/redux/react-redux-saga-book-demo/components/bookStoreReduxFunction'
 
 function App() {
   return (
@@ -43,6 +43,7 @@ function App() {
           
           <Route path="redux-cookie" element={<CookiesComponent/>}></Route>
           <Route path="redux-book" element={<BookStoreReduxFunction/>}></Route>
+          <Route path="redux-saga-book" element={<BookStoreReduxSagaFunction/>}></Route>
         </Routes>
       </div>
     </Provider>
