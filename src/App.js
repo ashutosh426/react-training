@@ -23,6 +23,15 @@ import store from "./components/redux/react-redux-saga-book-demo/store/store";
 import HooksHeader from "./components/hooks/hooks-header";
 import UseStateDemo from "./components/hooks/useStateDemo";
 import RootComponent from "./components/hooks/use-context-demo/rootComponent";
+import CounterTitleClass from "./components/hooks/use-effect-demo/counterTitleClass";
+import CounterTitleFunction from "./components/hooks/use-effect-demo/counterTitleFunction";
+import CounterTitleFunction1 from "./components/hooks/custom-hooks/counterTitleFunction1";
+import RootBookStoreGraphql from "./components/graphql/rootBookStoreGraphql";
+import BookStoreGraphql from "./components/graphql/bookStoreGraphql";
+import BookViewGraphql from "./components/graphql/bookViewGraphql";
+import BookAddGraphql from "./components/graphql/bookAddGraphql";
+import CounterDemo from "./components/testing/counterDemo";
+
 
 function App() {
   return (
@@ -78,8 +87,19 @@ function App() {
           <Route path="hooks" element={<HooksHeader />}>
             <Route path="use-state" element={<UseStateDemo />}></Route>
             <Route path="use-context" element={<RootComponent />}></Route>
+            <Route path="class-demo" element={<CounterTitleClass />}></Route>
+            <Route path="use-effect" element={<CounterTitleFunction />}></Route>
+            <Route path="custom-hook" element={<CounterTitleFunction1 />}></Route>
           </Route>
 
+          <Route path="root-book-graphql" element={<RootBookStoreGraphql />}>
+            <Route path="book-store-graphql" element={<BookStoreGraphql />}>
+            <Route path="book-view-graphql/:bookId" element={<BookViewGraphql/>}></Route>
+            </Route>
+            <Route path="book-add-graphql" element={<BookAddGraphql />}></Route>  
+          </Route>
+
+          <Route path="counter-demo" element={<CounterDemo/>}></Route>  
         </Routes>
       </div>
     </Provider>
