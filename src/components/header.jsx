@@ -36,6 +36,10 @@ function Header() {
           <li className="nav-item">
             <Link className="nav-link" to="/redux-saga-book"> Book Store Redux Saga Component</Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/hooks/use-state"> Hooks</Link>
+          </li>
+          
         </ul>
       </div>
     </nav>

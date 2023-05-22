@@ -63,7 +63,7 @@ function BookStoreFunction() {
     return ( 
         <div className="container m-5">
                 <h2>{title}</h2>
-                <button type="button" className="btn btn-success" onClick={handleAddNewBook}>ADD NEW BOOK</button>
+                <button type="button" className="btn btn-success my-5" onClick={handleAddNewBook}>ADD NEW BOOK</button>
 
                 <Outlet></Outlet>
                 <table className="table table-striped">

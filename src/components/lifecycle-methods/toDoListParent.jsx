@@ -80,7 +80,7 @@ class ToDoListParent extends Component {
     getSnapshotBeforeUpdate(prevProps, prevState){
         console.log("Parent getSnapshotBeforeUpdate called...", prevProps, prevState);
         return null;
-    }
+    }  
 
     // Updating - 5
     // called only once during the rerender cycle
